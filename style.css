@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;900&family=Barlow:wght@300;400;600&display=swap');
+
+:root {
+  --bg: #141414;
+  --fg: #ffffff;
+  --red: #EC1D24;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: 'Barlow', Arial, sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero / Logo */
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem 2rem;
+  gap: 1.5rem;
+}
+
+.hero svg {
+  max-width: 92vw;
+  height: auto;
+  display: block;
+}
+
+/* Subpage content */
+
+.page {
+  flex: 1;
+  width: 100%;
+  max-width: 640px;
+  padding: 4rem 1.5rem 2rem;
+}
+
+.page h1 {
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-weight: 900;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--red);
+  margin-bottom: 2rem;
+}
+
+.page h2 {
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--red);
+  opacity: 0.7;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.page p {
+  line-height: 1.75;
+  margin-bottom: 0.875rem;
+  opacity: 0.8;
+  font-size: 0.9375rem;
+}
+
+.page strong {
+  font-weight: 600;
+  opacity: 1;
+  color: var(--fg);
+}
+
+/* Navigation */
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.75rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+nav a {
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 0.6875rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.45;
+  transition: opacity 0.15s, color 0.15s;
+}
+
+nav a:hover {
+  color: var(--red);
+  opacity: 1;
+}
+
+/* Links */
+
+a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
