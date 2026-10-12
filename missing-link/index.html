@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Missing Link – VKB-2-VPforce-Konverter</title>
+<style>:root{color-scheme:dark;--bg:#0b1020;--panel:#131b2e;--line:#28344e;--muted:#9aa9c2;--text:#eef4ff;--accent:#79e0c3;--warn:#ffcf7a;--err:#ff9e9e}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#172542 0,#0b1020 58%);background-color:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:1060px;margin:auto;padding:32px 16px 0}.eyebrow{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}h1{font-size:clamp(28px,4vw,40px);line-height:1.1;margin:8px 0}h3{font-size:14px;margin:18px 0 6px;color:var(--accent)}p{color:var(--muted)}.top{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:26px}.status{border:1px solid var(--line);border-radius:99px;padding:7px 12px;color:var(--muted);font-size:13px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#75829a;margin-right:8px}.dot.ok{background:var(--accent)}.fwwarn{border:1px solid var(--warn);background:#ffcf7a1a;border-radius:12px;padding:10px 12px;margin:0 0 14px;display:flex;flex-direction:column;gap:4px;line-height:1.4;font-size:14px}.fwwarn[hidden]{display:none}.fwwarn strong{color:var(--warn)}.grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px}.card{background:linear-gradient(160deg,#172137,#11192a);border:1px solid var(--line);border-radius:18px;padding:20px;min-width:0}.wide{grid-column:1/-1}h2{font-size:17px;margin:0 0 14px}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}button{display:inline-flex;align-items:center;justify-content:center;gap:6px;box-sizing:border-box;height:32px;padding:0 12px;flex:0 0 auto;white-space:nowrap;border:1px solid #33425f;background:#1d2840;color:var(--text);border-radius:9px;font:inherit;font-size:13px;font-weight:600;line-height:1;cursor:pointer;transition:background .12s,border-color .12s,color .12s}button:hover:not(:disabled){background:#26344f;border-color:#46577b}button.primary{color:var(--accent);border-color:var(--accent)}button.primary:hover:not(:disabled){background:#1f3a3e;border-color:var(--accent)}button:disabled,button.primary:disabled{background:#151d2f;color:#56637d;border-color:#222c42;cursor:not-allowed}button.mini{height:26px;padding:0 9px;font-size:12px}button.held{background:var(--accent);color:#08251f}label{display:block;color:var(--muted);font-size:13px;margin:10px 0 4px}input,select{width:100%;border:1px solid var(--line);border-radius:9px;background:#0c1425;color:var(--text);padding:9px;font:inherit}input[type=checkbox]{width:auto;margin-right:8px}input[type=range]{padding:0}.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:4px 14px}.hint{font-size:12px;color:var(--muted)}.hint.good{color:var(--accent)}.message{min-height:24px;color:var(--accent);font-size:13px;margin-top:10px}.message.error{color:var(--err)}.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px}.kv dt{color:var(--muted)}.kv dd{margin:0;overflow-wrap:anywhere}.badge{display:inline-block;border:1px solid var(--line);border-radius:6px;padding:1px 8px}.badge.run{color:var(--accent);border-color:var(--accent)}.badge.config{color:var(--warn);border-color:var(--warn)}.badge.detect{color:var(--muted)}.tag{font-size:11px;border:1px solid var(--line);border-radius:6px;padding:2px 7px;color:var(--muted)}.tag.pinned{color:var(--accent);border-color:var(--accent)}.plrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:6px 0;border-top:1px solid var(--line)}.plrow span:nth-child(2){flex:1}.btngrid{display:grid;grid-template-columns:repeat(12,1fr);gap:4px}.btn{border:1px solid var(--line);border-radius:6px;text-align:center;font-size:11px;padding:4px 0;color:var(--muted)}.btn.on{background:var(--accent);color:#08251f;border-color:transparent;font-weight:800}.axrow{display:grid;grid-template-columns:70px 1fr 48px;gap:10px;align-items:center;margin-top:8px;font-size:13px}.bar{height:12px;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#0c1425}.fill{height:100%;width:50%;background:var(--accent)}.axval{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}.steps{display:grid;grid-template-columns:1fr 1fr;gap:16px}.step.full{grid-column:1/-1}.step{border:1px solid var(--line);border-radius:14px;padding:14px;min-width:0}.step h3{margin-top:0}table{width:100%;border-collapse:collapse;font-size:13px}td{border-top:1px solid var(--line);padding:4px 6px}.cell{width:auto;max-width:96px;padding:3px 6px;font-size:13px}tr.head td{color:var(--muted);font-size:12px}.tablewrap{max-height:220px;overflow:auto;margin-top:8px}canvas{width:100%;height:160px;background:#0c1425;border:1px solid var(--line);border-radius:10px;margin-top:8px}.log{height:170px;overflow:auto;background:#080d18;border:1px solid var(--line);border-radius:10px;padding:12px;font:12px/1.6 ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere}.livewrap{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}.livewrap:has(.namedlive:not([hidden])){grid-template-columns:minmax(0,1fr) min(var(--figw,300px),45%);grid-template-areas:"values fig" "named fig";align-items:start}.livewrap>div:first-child{grid-area:values}.livewrap>.namedlive{grid-area:named}.livewrap>.livefig{grid-area:fig}.livefig{margin:0}.livefig .grip3d{max-width:100%}.liveled{margin-top:6px;font-size:12px;color:var(--muted);text-align:center}.leddot{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:-1px;background:#222;border:1px solid rgba(255,255,255,.3)}.leddot.oval{width:16px;height:8px;margin-left:5px;vertical-align:1px}.leddot.white{background:#fff;box-shadow:0 0 6px #fff}.leddot.green{background:#3cff5a;box-shadow:0 0 6px #3cff5a}.leddot.orange{background:#ff9a1f;box-shadow:0 0 6px #ff9a1f}.leddot.red{background:#ff3b30;box-shadow:0 0 7px #ff3b30}.leddot.rainbow{animation:ledrainbow 1.68s linear infinite}@keyframes ledrainbow{0%{background:#ff2020}16.7%{background:#ffff20}33.3%{background:#20ff20}50%{background:#20ffff}66.7%{background:#2020ff}83.3%{background:#ff20ff}to{background:#ff2020}}@media(prefers-reduced-motion:reduce){.leddot.rainbow{animation:none;background:conic-gradient(#ff3b30,#ffe03b,#3cff5a,#2ee6e6,#3b6bff,#d84bff,#ff3b30)}}.card:has(>.livewrap){container-type:inline-size}@container (max-width:540px){.livewrap:has(.namedlive:not([hidden])){grid-template-columns:minmax(0,1fr);grid-template-areas:"values" "named" "fig"}.livefig .grip3d{max-width:260px}}.namedlive h3{margin:0 0 8px}.lgroups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.lg{border:1px solid var(--line);border-radius:10px;padding:6px 8px;background:#ffffff05}.lg h4{margin:0 0 5px;font-size:11px;letter-spacing:.04em;color:var(--muted);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.lg .cell{display:flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:6px;background:#202d45;color:var(--muted);font-size:11px;height:24px;padding:0 6px;transition:background .05s}.lg .cell.on{background:var(--accent);color:#08251f;border-color:transparent;font-weight:700}.lg .pad{display:grid;grid-template-columns:repeat(3,24px);grid-template-rows:repeat(3,21px);gap:2px;justify-content:center}.lg .pad .cell{height:21px}.lg .pad .cell{padding:0}.lg .chips{display:flex;flex-wrap:wrap;gap:3px}.lg .chips .cell{flex:1 1 auto}.lg.full,.lg:first-child{grid-column:1/-1}#demoHome{display:contents}#demoPanel{container-type:inline-size}.demogrip{margin:8px 0;grid-template-columns:repeat(5,minmax(0,1fr))}@container (max-width:720px){.demogrip{grid-template-columns:repeat(3,minmax(0,1fr))}}@container (max-width:480px){.demogrip{grid-template-columns:repeat(2,minmax(0,1fr))}}.demogrip .stick2d+.chips,.demogrip .lg>div>.chips{justify-content:center}.demogrip .stick2d+.chips .cell{flex:0 0 72px}.demogrip button.cell{padding:0 6px;font-weight:600;color:var(--text);cursor:pointer;touch-action:none;user-select:none;-webkit-user-select:none}.modesw{display:flex;gap:3px;margin-bottom:5px}.modesw button{flex:1;height:24px;padding:0 4px;font-size:11px;font-weight:600}.modesw button[aria-pressed=true]{background:var(--accent);color:#08251f;border-color:transparent}.stick2d{position:relative;width:72px;height:72px;margin:0 auto 4px;border:1px solid var(--line);border-radius:50%;background:#0c1425;touch-action:none;cursor:grab}.stick2d .knob{position:absolute;left:50%;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:var(--accent);pointer-events:none}.demogrip button[aria-pressed=true]:not(.cell){color:var(--accent);border-color:var(--accent);background:#1f3a3e}.demogrip .slider{display:grid;grid-template-columns:minmax(90px,auto) 1fr 56px;gap:8px;align-items:center;font-size:12px;color:var(--muted)}#wizDemo .card{margin:12px 0 0;padding:12px}#wizDemo .card h2{font-size:16px;margin:0 0 4px}dialog#wizard{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:18px;width:calc(100% - 32px);max-width:980px;max-height:92vh;padding:0;display:none;flex-direction:column}#bottom{max-width:1060px;margin:auto;padding:16px 16px 40px}#wizHome{display:contents}body.docked :is(main,#bottom),body.docked:has(#demoPanel:not([hidden])) :is(main,#bottom){max-width:none}.grid>#wizHome>dialog#wizard{grid-column:3;grid-row:1/span 2;align-self:stretch;position:static;inset:auto;margin:0;width:auto;max-width:none;height:auto;max-height:none;background:linear-gradient(160deg,#172137,#11192a);border:1px solid var(--line);border-radius:18px;box-shadow:none}.grid>#wizHome>dialog#wizard .wizbody{overflow:visible}.grid>#wizHome>dialog#wizard .wizlive{display:none}.grid:has(>#wizHome>#wizard[open]){grid-template-columns:minmax(0,2fr) minmax(0,3fr) minmax(440px,3fr)}.grid:has(>#wizHome>#wizard[open])>.card.wide{grid-column:1/3}.grid:has(>#wizHome>#wizard[open]):has(#demoPanel:not([hidden])){grid-template-columns:minmax(0,2fr) minmax(0,3fr) minmax(400px,3fr) minmax(290px,2fr)}.grid:has(>#wizHome>#wizard[open])>#demoHome>#demoPanel:not([hidden]){grid-column:4}main{container-type:inline-size}body:has(#demoPanel:not([hidden])) :is(main,#bottom){max-width:1480px}@container (min-width:1050px){.grid:has(#demoPanel:not([hidden])){grid-template-columns:minmax(0,2fr) minmax(0,3fr) minmax(360px,460px)}.grid:has(#demoPanel:not([hidden]))>.card.wide{grid-column:1/3}.grid>#demoHome>#demoPanel:not([hidden]){grid-column:3;grid-row:1/span 2;align-self:stretch}}dialog#wizard[open]{display:flex}dialog.small{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:18px;width:calc(100% - 32px);max-width:560px;padding:20px 22px}dialog.small::backdrop{background:#03060eb8}.fwsteps{padding-left:20px;display:flex;flex-direction:column;gap:12px}.fwsteps p{margin:4px 0 8px}.hint.warn{color:var(--warn)}.hint.ok,#fwDownload{color:var(--accent)}#fwWarnBtn{align-self:flex-start;margin-top:4px}dialog#wizard::backdrop{background:#03060eb8}.wizhead{padding:18px 20px 8px;border-bottom:1px solid var(--line)}.wizhead h2{margin:0 0 10px}.wizsteps{display:flex;gap:6px;flex-wrap:wrap;list-style:none;margin:0;padding:0;counter-reset:s}.wizsteps li{counter-increment:s;font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:3px 10px}.wizsteps li:before{content:counter(s) " \b7  "}.wizsteps li.done{color:var(--text)}.wizsteps li.active{color:#08251f;background:var(--accent);border-color:transparent;font-weight:700}.wizbody{overflow:auto;padding:16px 20px;flex:1}.pane{display:none}.pane.active{display:block}.pane h3{margin-top:0}.pane label{color:var(--text)}.wizlive{border-top:1px solid var(--line);margin-top:16px;padding-top:10px}.wizfoot{border-top:1px solid var(--line);padding:10px 20px 14px}.wizfoot .actions{margin-top:6px}.spacer{flex:1}.topright{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.langsw{display:inline-flex;border:1px solid var(--line);border-radius:99px;overflow:hidden}.langsw button{height:28px;border:0;border-radius:0;background:transparent;color:var(--muted);padding:0 10px;font-size:12px;font-weight:700;display:inline-flex;gap:6px;align-items:center}.langsw button[aria-pressed=true]{background:#202d45;color:var(--text)}.langsw svg{width:18px;height:12px;border-radius:2px;display:block}.intro{margin-bottom:6px}.intro p{margin:8px 0}.intro b{color:var(--text)}.intro ul{margin:8px 0;padding-left:20px;color:var(--muted)}.intro li{margin:4px 0}.introtoggle{margin:0 0 16px;text-align:right}.tagline{margin:-4px 0 6px;color:var(--accent);font-size:clamp(15px,2vw,19px);font-weight:600}footer{margin-top:18px;color:var(--muted);font-size:12px}footer a,.legal a{color:var(--accent)}.linkbtn{display:inline;height:auto;border:0;background:none;padding:0;font:inherit;font-weight:inherit;color:var(--accent);cursor:pointer;text-decoration:underline}.linkbtn:hover:not(:disabled){background:none}dialog.legal{max-width:680px;max-height:88vh;overflow:auto}.legal h3{margin:16px 0 6px;font-size:15px}.legal p{margin:6px 0;font-size:14px;line-height:1.5}@media(max-width:760px){.grid,.steps{grid-template-columns:1fr}.wide,.step.full{grid-column:auto}.btngrid{grid-template-columns:repeat(8,1fr)}}.btnlayout{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start}@media(max-width:760px){.btnlayout{grid-template-columns:1fr}}.gripfig{margin:0;border:1px solid var(--line);border-radius:14px;padding:10px;background:#ffffff05}.gripfig figcaption{display:flex;flex-direction:column;gap:4px;text-align:center;font-size:13px}#axGuideFig[hidden]{display:none}.axguide{color:var(--accent);font-weight:600}.gripfig figcaption button{align-self:center}.gripfig figcaption strong{color:var(--accent);min-height:1.2em}#gripFig[hidden]+figcaption,.gripfig:has(#gripFig[hidden]){display:none}.legend{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:4px 10px;text-align:left;font-size:12px;color:var(--muted)}.legend li{display:flex;gap:8px;align-items:flex-start}.legend .sw{flex:none;width:12px;height:12px;border-radius:3px;margin-top:2px}.sw.hot{background:#fff;box-shadow:0 0 6px #fff}.sw.todo{background:#ffb028}.sw.red{background:#ff463c}.sw.done{background:#00dcff}.sw.body{background:#000;border:1px solid #39ff14}.sw.alt{background:none;border:1px dashed #fff}.grip3d{width:100%;max-width:calc(42vh * 500 / 740);margin:0 auto;height:auto;display:block;touch-action:none;cursor:grab;background:#000;border-radius:10px}.grip3d:active{cursor:grabbing}.gripsvg{width:100%;height:auto;display:block;touch-action:none;cursor:grab}.gripsvg:active{cursor:grabbing}.gripsvg .wire{fill:none;stroke:#7f95c0;stroke-width:1;stroke-linecap:round}.gripsvg .w0{opacity:.16}.gripsvg .w1{opacity:.3}.gripsvg .w2{opacity:.5}.gripsvg .w3{opacity:.8}.gripsvg .ctl .shape{fill:#141e34e6;stroke:#c3d0ea;stroke-width:2}.gripsvg .ctl.lever .shape{fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}.gripsvg .ctl .cross,.gripsvg .ctl .ring{fill:none;stroke:#c3d0ea;stroke-width:1.5}.gripsvg .ctl.red .shape{stroke:#e0625c}.gripsvg .ctl.button.red .shape{fill:#8a2c2a}.gripsvg .ctl.back .shape,.gripsvg .ctl.back .cross,.gripsvg .ctl.back .ring{stroke-dasharray:4 3;fill:#141e3459;opacity:.7}.gripsvg .lbl{fill:var(--muted);font-size:15px;font-family:inherit;pointer-events:none;paint-order:stroke;stroke:var(--panel);stroke-width:4px;stroke-linejoin:round}.gripsvg .ctl .alt{stroke-dasharray:7 5;opacity:.8}.gripsvg .ctl.done .shape,.gripsvg .ctl.done .cross,.gripsvg .ctl.done .ring{stroke:#4f9c86}.gripsvg .ctl.done .lbl{fill:#4f9c86}.gripsvg .ctl.hot .shape,.gripsvg .ctl.hot .cross,.gripsvg .ctl.hot .ring{stroke:var(--accent);opacity:1}.gripsvg .ctl.hot .shape{animation:pulse 1s ease-in-out infinite}.gripsvg .ctl.hot .lbl{fill:var(--accent);font-weight:700;font-size:17px}.gripsvg .arrow{fill:var(--accent)}@keyframes pulse{50%{stroke-width:5}}.gripsvg .ctl.lever.hot .shape{animation:pulsel 1s ease-in-out infinite}@keyframes pulsel{50%{stroke-width:10}}@media(prefers-reduced-motion:reduce){.gripsvg .ctl.hot .shape{animation:none}}
+</style>
+</head>
+<body><div id="layout"><main>
+  <div class="top">
+    <div><div class="eyebrow">VKB RevC → VPforce Rhino</div><h1 data-i18n="top.h1"></h1><p class="tagline" data-i18n="top.tagline"></p>
+      <p data-i18n="top.sub"></p></div>
+    <div class="topright">
+      <div class="langsw" role="group" data-i18n-title="lang.group">
+        <button data-lang="de" aria-pressed="false" data-i18n-title="lang.de"><svg viewBox="0 0 5 3" aria-hidden="true"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#D00"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg>DE</button>
+        <button data-lang="en" aria-pressed="false" data-i18n-title="lang.en"><svg viewBox="0 0 60 30" aria-hidden="true"><clipPath id="gbclip"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#gbclip)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg>EN</button>
+      </div>
+      <div class="status"><span id="dot" class="dot"></span><span id="connStatus" data-i18n="conn.none"></span></div>
+    </div>
+  </div>
+  <section class="card intro" id="intro">
+    <h2 data-i18n="intro.title"></h2>
+    <p data-i18n-html="intro.what"></p>
+    <div data-i18n-html="intro.tool"></div>
+    <p data-i18n-html="intro.needs"></p>
+    <p data-i18n-html="intro.start"></p>
+    <p class="hint" data-i18n="intro.privacy"></p>
+  </section>
+  <p class="introtoggle"><button id="introToggle" class="mini"></button></p>
+  <div class="grid">
+    <section class="card">
+      <h2 data-i18n="c1.title"></h2>
+      <p data-i18n="c1.text"></p>
+      <div class="row"><button id="connectBtn" class="primary" data-i18n="btn.connect" data-i18n-title="tip.connect"></button><button id="demoBtn" data-i18n="btn.demo" data-i18n-title="tip.demo"></button><button id="disconnectBtn" disabled data-i18n="btn.disconnect" data-i18n-title="tip.disconnect"></button></div>
+      <div id="message" class="message" role="status"></div>
+      <div id="fwWarn" class="fwwarn" role="alert" hidden><strong id="fwWarnTitle"></strong><span id="fwWarnText"></span><button id="fwWarnBtn" class="mini primary" hidden data-i18n="btn.fwNow"></button></div>
+      <dl class="kv">
+        <dt data-i18n="c2.fw"></dt><dd id="fwVersion">–</dd>
+        <dt data-i18n="c2.rhino"></dt><dd><span id="rhinoStats" class="hint"></span><div id="rhinoVerdict" class="hint"></div></dd>
+      </dl>
+      <div class="actions"><button id="fwBtn" data-i18n="btn.fw" data-i18n-title="tip.fwUpdate"></button></div>
+    </section>
+    <section class="card">
+      <h2 data-i18n="c2.title"></h2>
+      <dl class="kv">
+        <dt data-i18n="c2.state"></dt><dd><span id="devState" class="badge">–</span> <span id="devCal" class="hint"></span></dd>
+        <dt data-i18n="c2.grip"></dt><dd id="devProfile">–</dd>
+        <dt data-i18n="c2.polls"></dt><dd id="stats" class="hint"></dd>
+        <dt data-i18n="c2.draft"></dt><dd id="draftSummary" class="hint"></dd>
+        <dt data-i18n="c2.led" id="ledLabel" hidden></dt><dd id="ledRow" hidden><span class="leddot" id="ledDot"></span><span class="leddot oval" id="ledDot2"></span> <span id="ledText" class="hint"></span></dd>
+      </dl>
+      <div class="actions"><button id="wizOpenBtn" class="primary" disabled data-i18n="btn.wizOpen" data-i18n-title="tip.wizOpen"></button><button id="detectBtn" disabled data-i18n="btn.detect" data-i18n-title="tip.detect"></button><button id="configBtn" disabled data-i18n="btn.config" data-i18n-title="tip.config"></button></div>
+      <h3 data-i18n="c2.profiles"></h3>
+      <div id="profileList"></div>
+    </section>
+
+    <section class="card wide">
+      <h2 data-i18n="c3.title"></h2>
+      <p class="hint" id="liveSource"></p>
+      <div class="livewrap">
+        <div><div class="btngrid" id="btnGrid"></div><div id="axisBars"></div></div>
+        <aside id="namedLive" class="namedlive" hidden><h3 id="namedLiveTitle"></h3><div id="namedBtns" class="lgroups"></div></aside>
+        <figure id="liveFig" class="livefig" hidden><div id="liveFigModel"></div><figcaption id="liveLed" class="liveled" hidden><span class="leddot" id="liveLedDot"></span><span class="leddot oval" id="liveLedDot2"></span> <span id="liveLedText"></span></figcaption></figure>
+      </div>
+    </section>
+
+
+    <div id="wizHome"></div>
+    <div id="demoHome"><section class="card wide" id="demoPanel" hidden>
+      <h2 data-i18n="demo.title"></h2>
+      <p class="hint" data-i18n="demo.hint"></p>
+      <div id="demoGrip" class="lgroups demogrip"></div>
+      <div class="row"><label><input id="demoUnknown" type="checkbox"><span data-i18n="demo.unknown"></span></label>
+        <label><input id="demoSpring" type="checkbox" checked><span data-i18n="demo.spring"></span></label></div>
+    </section></div>
+
+  </div>
+</main>
+<div id="bottom">
+    <section class="card" id="logCard">
+      <h2 data-i18n="log.title"></h2>
+      <div id="log" class="log"></div>
+      <div class="actions"><button id="clearLogBtn" data-i18n="btn.clearLog" data-i18n-title="tip.clearLog"></button></div>
+    </section>
+  <footer><span data-i18n="footer"></span> · <a href="../site/impressum.html" data-i18n="ft.imprint"></a> ·
+    <a href="../site/datenschutz-missing-link.html" data-i18n="ft.privacy"></a> ·
+    <button type="button" id="legalBtn" class="linkbtn" data-i18n="ft.legal"></button></footer>
+</div>
+</div>
+  <dialog id="fwDialog" class="small" aria-labelledby="fwDlgTitle">
+    <h2 id="fwDlgTitle" data-i18n="fw.dlgTitle"></h2>
+    <p id="fwDlgInfo"></p>
+    <ol class="fwsteps">
+      <li><strong data-i18n="fw.s1"></strong><p class="hint" data-i18n="fw.s1text"></p><button id="fwBootBtn" data-i18n="btn.fwBoot"></button></li>
+      <li><strong data-i18n="fw.s2"></strong><p class="hint" data-i18n="fw.s2text"></p><button id="fwWriteBtn" class="primary" data-i18n="btn.fwWrite"></button>
+        <p id="fwNoPicker" class="hint warn" hidden data-i18n="fw.noPicker"></p></li>
+      <li><strong data-i18n="fw.s3"></strong><p class="hint" data-i18n="fw.s3text"></p></li>
+    </ol>
+    <p id="fwDlgMsg" class="hint" role="status"></p>
+    <p class="hint"><a id="fwDownload" data-i18n="fw.download"></a></p>
+    <p class="hint"><a href="firmware/LICENSES.txt" target="_blank" rel="noopener" data-i18n="fw.licenses"></a></p>
+    <div class="actions"><button id="fwCloseBtn" data-i18n="btn.fwClose"></button></div>
+  </dialog>
+
+  <dialog id="legalDialog" class="small legal" aria-labelledby="legalTitle">
+    <h2 id="legalTitle" data-i18n="legal.title"></h2>
+    <div data-i18n-html="legal.body"></div>
+    <div class="actions"><button id="legalCloseBtn" data-i18n="btn.fwClose"></button></div>
+  </dialog>
+
+  <dialog id="wizard" aria-labelledby="wizTitle">
+    <header class="wizhead">
+      <h2 id="wizTitle" data-i18n="wiz.title"></h2>
+      <ol id="wizSteps" class="wizsteps"><li data-i18n="wiz.step0"></li><li data-i18n="wiz.step1"></li><li data-i18n="wiz.step2"></li><li data-i18n="wiz.step3"></li><li data-i18n="wiz.step4"></li></ol>
+    </header>
+    <div class="wizbody">
+      <section class="pane" data-step="0">
+        <h3 data-i18n="wiz.s0.title"></h3>
+        <label><input type="radio" name="wizMode" value="new" checked><span data-i18n="wiz.s0.new"></span></label>
+        <label><input type="radio" name="wizMode" value="device"><span data-i18n="wiz.s0.device"></span>
+          <select id="wizProfile" class="cell"></select></label>
+        <label><input type="radio" name="wizMode" value="continue"><span data-i18n="wiz.s0.continue"></span> (<span id="wizDraftInfo"></span>)</label>
+      </section>
+      <section class="pane" data-step="1">
+        <h3 data-i18n="wiz.s1.title"></h3>
+        <p data-i18n="wiz.s1.text"></p>
+        <div class="row"><button id="restBtn" disabled data-i18n="btn.rest" data-i18n-title="tip.rest"></button><span id="restInfo" class="hint"></span></div>
+      </section>
+      <section class="pane" data-step="2">
+        <h3><span data-i18n="wiz.s2.title"></span> (<span id="axCount">0</span>)</h3>
+        <p data-i18n-html="wiz.s2.text"></p>
+        <div class="btnlayout">
+          <div>
+            <p id="axGuideInfo" class="hint axguide"></p>
+          <div class="fields">
+            <div><label for="axKind" data-i18n="ax.kind"></label><select id="axKind"><option value="1" data-i18n="ax.kind.centered"></option><option value="2" data-i18n="ax.kind.oneSided"></option><option value="3" data-i18n="ax.kind.range"></option></select></div>
+            <div><label for="axRhino" data-i18n="ax.rhino"></label><select id="axRhino"><option value="0" data-i18n="ax.rhino.none"></option><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+            <div><label for="axNeg" data-i18n="ax.neg"></label><input id="axNeg" type="number" min="0" max="48" value="0"></div>
+            <div><label for="axPos" data-i18n="ax.pos"></label><input id="axPos" type="number" min="0" max="48" value="0"></div>
+          </div>
+          <label><input id="axInvert" type="checkbox"><span data-i18n="ax.invert"></span></label>
+          <div class="row"><button id="axisRecBtn" disabled data-i18n-title="tip.axisRec"></button><span id="axisInfo" class="hint"></span></div>
+          <canvas id="sweepPlot" height="160"></canvas>
+          <label for="axCand" data-i18n="ax.cand"></label><select id="axCand" disabled></select>
+          <div id="axAngleRow" hidden>
+            <label><input id="axAngle" type="checkbox"><span data-i18n="ax.angle"></span></label><select id="axPartner"></select>
+            <p id="axAngleHint" class="hint"></p>
+          </div>
+          <p id="axCurveInfo" class="hint"></p>
+          <div class="actions"><button id="axApplyBtn" class="primary" disabled data-i18n="btn.axApply" data-i18n-title="tip.axApply"></button></div>
+          </div>
+          <figure class="gripfig" id="axGuideFig"><div id="axFig"></div><figcaption><strong id="axStep"></strong><span class="hint" data-i18n="grip.caption"></span><button id="axSkip" class="mini" data-i18n="btn.skip" data-i18n-title="tip.axSkip"></button></figcaption></figure>
+        </div>
+        <p class="hint" data-i18n-html="ax.help"></p>
+        <div class="tablewrap"><table><tbody id="axTable"></tbody></table></div>
+        <h4 data-i18n="zone.title"></h4>
+        <p class="hint" data-i18n-html="zone.help"></p>
+        <div class="tablewrap"><table><tbody id="zoneTable"></tbody></table></div>
+        <div class="actions"><button id="zoneAddBtn" data-i18n="btn.zoneAdd" data-i18n-title="tip.zoneAdd"></button></div>
+      </section>
+      <section class="pane" data-step="3">
+        <h3><span data-i18n="wiz.s3.title"></span> (<span id="btnCount">0</span>)</h3>
+        <p class="hint" data-i18n="wiz.s3.text"></p>
+        <div class="btnlayout">
+          <div>
+            <div class="fields">
+              <div><label for="gripModel" data-i18n="grip.model"></label><select id="gripModel" data-i18n-title="tip.gripModel"><option value="" data-i18n="grip.none"></option><option value="mcgUltimate" selected>MCG Ultimate</option></select></div>
+              <div><label for="btnNext" data-i18n="btn.next"></label><input id="btnNext" type="number" min="1" max="48" value="1"></div>
+            </div>
+            <div class="actions"><button id="btnLearnBtn" disabled data-i18n-title="tip.learn"></button><button id="btnSkip" hidden data-i18n="btn.skip" data-i18n-title="tip.skip"></button></div>
+            <p id="btnInfo" class="hint"></p>
+            <div id="btnChoices" class="row"></div>
+            <div class="tablewrap"><table><tbody id="btnTable"></tbody></table></div>
+          </div>
+          <figure class="gripfig"><div id="gripFig"></div><figcaption><strong id="gripStep"></strong><span class="hint" data-i18n="grip.caption"></span><ul class="legend"><li><i class="sw hot"></i><span data-i18n="leg.hot"></span></li><li><i class="sw todo"></i><span data-i18n="leg.todo"></span></li><li><i class="sw red"></i><span data-i18n="leg.red"></span></li><li><i class="sw done"></i><span data-i18n="leg.done"></span></li><li><i class="sw body"></i><span data-i18n="leg.body"></span></li><li><i class="sw alt"></i><span data-i18n="leg.alt"></span></li></ul></figcaption></figure>
+        </div>
+      </section>
+      <section class="pane" data-step="4">
+        <h3 data-i18n="wiz.s4.title"></h3>
+        <p data-i18n="wiz.s4.text"></p>
+        <div class="fields">
+          <div><label for="profName" data-i18n="prof.name"></label><input id="profName" maxlength="15" data-i18n-placeholder="prof.namePh"></div>
+          <div><label for="profSlot" data-i18n="prof.slotLabel"></label><select id="profSlot"><option>0</option><option>1</option><option>2</option><option>3</option></select></div>
+        </div>
+        <div class="actions"><button id="testBtn" disabled data-i18n="btn.test" data-i18n-title="tip.test"></button><button id="saveBtn" class="primary" disabled data-i18n="btn.save" data-i18n-title="tip.save"></button></div>
+        <div class="actions"><button id="exportBtn" data-i18n="btn.export" data-i18n-title="tip.export"></button><button id="importBtn" data-i18n="btn.import" data-i18n-title="tip.import"></button><button id="resetBtn" data-i18n="btn.reset" data-i18n-title="tip.reset"></button>
+          <input id="fileInput" type="file" accept=".mlprofile" hidden></div>
+      </section>
+      <div class="wizlive">
+        <p class="hint" id="wizLiveSource"></p>
+        <div class="btngrid" id="wBtnGrid"></div>
+        <div id="wAxisBars"></div>
+        <div id="wizDemo"></div>
+      </div>
+    </div>
+    <footer class="wizfoot">
+      <div id="wizMsg" class="message" role="status"></div>
+      <div class="actions">
+        <button id="wizCloseBtn" data-i18n-title="tip.wizClose"></button><span class="spacer"></span>
+        <button id="wizBackBtn" data-i18n="btn.wizBack" data-i18n-title="tip.wizBack"></button><button id="wizNextBtn" class="primary" data-i18n-title="tip.wizNext"></button>
+      </div>
+    </footer>
+  </dialog>
+<script type="module" src="app.js"></script>
+</body></html>
