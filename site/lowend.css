@@ -10,7 +10,7 @@
 /* Farben (lowend.dev: Schwarz, Weiß, Rot). --fg und --text sind dasselbe, damit ältere Projekte beide Namen nutzen können. */
 :root{
   color-scheme:dark;
-  --bg:#141414; --fg:#ffffff; --text:#ffffff; --muted:#a3a3a3; --line:#333333;
+  --bg:#141414; --bg-top:#1c1c1c; --fg:#ffffff; --text:#ffffff; --muted:#a3a3a3; --line:#333333;
   --accent:#EC1D24; --accent-ink:#ffffff;
   --panel:#1f1f1f; --panel-a:#1f1f1f; --panel-b:#171717;
   --ok:#6cc48d; --warn:#ffcf7a; --err:#ff9e9e;
@@ -18,7 +18,10 @@
   --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 
-html,body{background:var(--bg);color:var(--fg)}
+/* Seitenhintergrund: dezenter Verlauf von oben (Grau) nach unten (Schwarz), fest im Fenster, damit er auf kurzen und langen Seiten gleich aussieht.
+   Nur html bekommt den Hintergrund; body darf keinen eigenen setzen. */
+html{min-height:100%;background:radial-gradient(ellipse at top,var(--bg-top) 0,var(--bg) 58%) no-repeat fixed var(--bg)}
+body{color:var(--fg)}
 body{font-family:var(--f-body);font-size:16px;line-height:1.5}
 
 /* Abschnittstitel */
