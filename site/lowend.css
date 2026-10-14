@@ -10,22 +10,24 @@
 /* Farben (lowend.dev: Schwarz, Weiß, Rot). --fg und --text sind dasselbe, damit ältere Projekte beide Namen nutzen können. */
 :root{
   color-scheme:dark;
-  --bg:#141414; --bg-top:#1c1c1c; --fg:#ffffff; --text:#ffffff; --muted:#a3a3a3; --line:#333333;
-  --accent:#EC1D24; --accent-ink:#ffffff;
+  --bg:#141414; --bg-edge:#0a0a0a; --bg-mid:#1f1f1f; --fg:#ffffff; --text:#ffffff; --muted:#a3a3a3; --line:#333333;
+  --accent:#EC1D24; --accent-ink:#ffffff; --accent-bg:#3a1618; --heading:#d4d4d4;
+  --btn-bg:#262626; --btn-bg-hover:#303030; --btn-border:#444444; --btn-border-hover:#666666;
+  --btn-bg-off:#1a1a1a; --btn-fg-off:#6a6a6a; --btn-border-off:#2a2a2a;
   --panel:#1f1f1f; --panel-a:#1f1f1f; --panel-b:#171717;
   --ok:#6cc48d; --warn:#ffcf7a; --err:#ff9e9e;
   --f-display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
   --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 
-/* Seitenhintergrund: dezenter Verlauf von oben (Grau) nach unten (Schwarz), fest im Fenster, damit er auf kurzen und langen Seiten gleich aussieht.
-   Nur html bekommt den Hintergrund; body darf keinen eigenen setzen. */
-html{min-height:100%;background:radial-gradient(ellipse at top,var(--bg-top) 0,var(--bg) 58%) no-repeat fixed var(--bg)}
+/* Seitenhintergrund: waagerechter Verlauf links Schwarz, Mitte Dunkelgrau, rechts Schwarz, fest im Fenster, damit er auf kurzen und
+   langen Seiten gleich aussieht. Nur html bekommt den Hintergrund; body und Seitenblöcke dürfen keinen eigenen setzen. */
+html{min-height:100%;background:linear-gradient(90deg,var(--bg-edge) 0%,var(--bg-mid) 50%,var(--bg-edge) 100%) no-repeat fixed var(--bg-edge)}
 body{color:var(--fg)}
 body{font-family:var(--f-body);font-size:16px;line-height:1.5}
 
 /* Abschnittstitel */
-h2{font-family:var(--f-display);font-weight:700;font-size:20px;letter-spacing:3px;text-transform:uppercase;color:var(--accent)}
+h2{font-family:var(--f-display);font-weight:700;font-size:20px;letter-spacing:3px;text-transform:uppercase;color:var(--heading)}
 
 /* Wortmarke im Stil des LOW END Logos: roter Block, weißer Innenrahmen, Condensed-Titel, gesperrte Unterzeile.
    <div class="logo"><p class="logo-main">Name</p><p class="logo-sub">Zusatz</p></div> (Titel auch als h1 möglich) */
@@ -53,3 +55,18 @@ h2{font-family:var(--f-display);font-weight:700;font-size:20px;letter-spacing:3p
 .intro ul{margin:8px 0;padding-left:20px;color:var(--muted)}
 .intro li{margin:4px 0}
 .introtoggle{margin:0;text-align:right}
+
+/* Buttons (Variante Missing Link): dunkel, helle Schrift, feste Höhe, Beschriftung bricht nicht um. primary = nächster Schritt (rote Kontur
+   und Schrift). Nicht verfügbar: gedeckt. Gilt für .btn (auch <label class="btn">) und, wenn <body class="lowend-buttons"> gesetzt ist,
+   für alle <button> (Spezifität wie ein einfacher button-Selektor, eigene Klassen gewinnen). */
+.btn,:where(.lowend-buttons) button{display:inline-flex;align-items:center;justify-content:center;gap:6px;box-sizing:border-box;height:32px;padding:0 12px;flex:0 0 auto;
+  white-space:nowrap;border:1px solid var(--btn-border);background:var(--btn-bg);color:var(--text);border-radius:9px;font:inherit;font-size:14px;
+  font-weight:600;line-height:1;cursor:pointer;transition:background .12s,border-color .12s,color .12s}
+.btn:hover:not(:disabled),:where(.lowend-buttons) button:hover:not(:disabled){background:var(--btn-bg-hover);border-color:var(--btn-border-hover)}
+.btn.primary,:where(.lowend-buttons) button.primary{color:var(--accent);border-color:var(--accent)}
+.btn.primary:hover:not(:disabled),:where(.lowend-buttons) button.primary:hover:not(:disabled){background:var(--accent-bg);border-color:var(--accent)}
+.btn:disabled,.btn.primary:disabled,:where(.lowend-buttons) button:disabled,:where(.lowend-buttons) button.primary:disabled{background:var(--btn-bg-off);color:var(--btn-fg-off);border-color:var(--btn-border-off);cursor:not-allowed}
+.btn.mini,:where(.lowend-buttons) button.mini{height:26px;padding:0 9px;font-size:12px}
+.btn.held,:where(.lowend-buttons) button.held{background:var(--accent);color:var(--accent-ink)}
+.btn[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
