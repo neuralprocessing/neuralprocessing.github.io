@@ -44,3 +44,12 @@ h2{font-family:var(--f-display);font-weight:700;font-size:20px;letter-spacing:3p
 .langsw button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
 .langsw button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 .langsw svg{width:18px;height:12px;border-radius:2px;display:block}
+
+/* Erklär-Panel: <section class="card intro" id="intro"> mit h2, Absätzen und Liste, darunter
+   <p class="introtoggle"><button>…</button></p> zum Ein- und Ausklappen */
+.intro{margin-bottom:6px}
+.intro p{margin:8px 0;color:var(--muted)}
+.intro b{color:var(--text)}
+.intro ul{margin:8px 0;padding-left:20px;color:var(--muted)}
+.intro li{margin:4px 0}
+.introtoggle{margin:0;text-align:right}
