@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;900&family=Barlow:wght@300;400;600&display=swap');
+/* Farben, Schriften (Barlow, selbst gehostet), Wortmarke usw. kommen aus lowend.css (Quelle: Repo lowend-design). */
+@import url('lowend.css');
 
 :root {
-  --bg: #141414;
-  --fg: #ffffff;
-  --red: #EC1D24;
+  --red: var(--accent);
 }
 
 *, *::before, *::after {
@@ -16,7 +15,7 @@ body {
   background-color: var(--bg);
   color: var(--fg);
   font-family: 'Barlow', Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
