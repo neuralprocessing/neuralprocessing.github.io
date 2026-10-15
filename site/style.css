@@ -118,3 +118,8 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/* Kontaktdaten im Quelltext umgedreht, per CSS richtig herum angezeigt */
+.rev {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
