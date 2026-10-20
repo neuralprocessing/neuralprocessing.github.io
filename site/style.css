@@ -170,7 +170,7 @@ a:hover {
 
 /* Web-App-Icons sind randlos quadratisch – roter Innenabstand hält den weißen Rahmen von den runden Ecken fern */
 .app-card .app-icon--web {
-  padding: 5px;
+  padding: 2px;
   background: #EC1D24;
 }
 
