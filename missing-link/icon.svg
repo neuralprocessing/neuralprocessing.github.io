@@ -1,5 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#EC1D24"/>
-  <rect x="2" y="2" width="28" height="28" fill="none" stroke="#FFFFFF" stroke-width="1"/>
-  <text x="50%" y="52%" dominant-baseline="central" text-anchor="middle" font-family="'Barlow Condensed', 'Arial Narrow', Impact, sans-serif" font-size="17" font-weight="900" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="round">ML</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="37" x2="0" y2="63">
+    <stop offset="0" stop-color="#B4B4B4"/><stop offset="1" stop-color="#0A0A0A"/></linearGradient></defs>
+  <rect width="100" height="100" fill="#FFFFFF"/>
+  <g fill="none" stroke="url(#g)" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 50 H24"/><path d="M76 50 H86"/><rect x="24" y="39" width="30" height="22" rx="11"/><rect x="46" y="39" width="30" height="22" rx="11"/>
+  </g>
 </svg>

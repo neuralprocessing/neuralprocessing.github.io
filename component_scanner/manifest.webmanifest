@@ -1,5 +1,5 @@
 {
-  "name": "Component Scanner",
+  "name": "Component Scan",
   "short_name": "Components",
   "description": "Erkennt Widerstände und Spulen per Farbring und rechnet Kondensator- und SMD-Codes.",
   "lang": "de",

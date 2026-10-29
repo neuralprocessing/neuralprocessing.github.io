@@ -29,20 +29,24 @@ body{font-family:var(--f-body);font-size:16px;line-height:1.5}
 /* Abschnittstitel */
 h2{font-family:var(--f-display);font-weight:700;font-size:20px;letter-spacing:3px;text-transform:uppercase;color:var(--heading)}
 
-/* Wortmarke im Stil des LOW END Logos: erstes Wort weiß im roten Block, zweites Wort weiß im schwarzen Block mit weißem Balken
-   darüber und darunter (wie END), beide gleich hoch. Abstände im Verhältnis zur Schriftgröße (Schrift füllt den Block fast aus),
-   die Unterzeile gesperrt darunter (wie DEVELOPMENT unter LOW END). Die Unterzeile ist nie breiter als die Wortmarke und bricht bei
-   Bedarf um.
+/* Wortmarke im Stil des LOW END Logos: erstes Wort weiß im roten Block, zweites Wort weiß direkt auf dem Hintergrund mit dünnem
+   weißem Strich darüber und darunter, bündig mit Ober- und Unterkante des roten Blocks (wie END). Abstände im Verhältnis zur
+   Schriftgröße (Schrift füllt den Block fast aus), die Unterzeile gesperrt darunter (wie DEVELOPMENT unter LOW END). Die Unterzeile
+   ist nie breiter als die Wortmarke und bricht bei Bedarf um.
    <div class="logo"><p class="logo-main"><span>Erstes</span> <span>Zweites</span></p><p class="logo-sub">Zusatz</p></div>
    (Titel auch als h1 möglich) */
 .logo{display:inline-grid;justify-items:stretch;text-align:center;color:#fff}
 .logo>*{margin:0}
-.logo-main{--bar:max(2px,.045em);--gap:max(2px,.03em);display:flex;gap:.16em;font-family:var(--f-display);font-weight:700;font-size:clamp(30px,9.5vw,56px);line-height:.82;text-transform:uppercase;letter-spacing:-.01em;color:#fff}
+.logo-main{display:flex;gap:.09em;font-family:var(--f-display);font-weight:700;font-size:clamp(30px,9.5vw,56px);line-height:.82;text-transform:uppercase;letter-spacing:-.01em;color:#fff}
 .logo-main>span{padding:.039em .085em .124em}
 .logo-main>span:first-child{background:var(--accent)}
-.logo-main>span+span{background:linear-gradient(#fff,#fff) top/100% var(--bar),linear-gradient(#fff,#fff) bottom/100% var(--bar),
-  linear-gradient(#000,#000) center/100% calc(100% - 2*(var(--bar) + var(--gap)));background-repeat:no-repeat}
-.logo-sub{width:0;min-width:100%;margin-top:8px!important;padding-left:.26em;box-sizing:border-box;font-size:clamp(10px,2.5vw,13px);line-height:1.35;font-weight:400;text-transform:uppercase;letter-spacing:.26em;color:#fff}
+/* Zweites Wort etwas größer, damit die Versalien den Raum zwischen den Strichen fast füllen (Abstand je ~9 % der Blockhöhe).
+   Zeilenhöhe .7 setzt die Versalhöhe von Barlow Condensed (.7em) fast bündig an die Zeilenoberkante. Die Striche sind Hintergründe,
+   um den Vor- und Nachbreitenrand der Glyphen eingerückt, damit sie links und rechts bündig mit den Buchstaben abschließen.
+   Gesamthöhe = Höhe des roten Blocks (Flex streckt beide gleich hoch). */
+.logo-main>span+span{--bar:max(1px,.028em);font-size:1.067em;line-height:.7;padding:calc(var(--bar) + .036em) 0 calc(var(--bar) + .129em);
+  background:linear-gradient(#fff,#fff) .035em 0/calc(100% - .065em) var(--bar),linear-gradient(#fff,#fff) .035em 100%/calc(100% - .065em) var(--bar);background-repeat:no-repeat}
+.logo-sub{width:0;min-width:100%;margin-top:8px!important;padding-left:.24em;box-sizing:border-box;font-size:clamp(10px,2.5vw,13px);line-height:1.35;font-weight:400;text-transform:uppercase;letter-spacing:.24em;color:#fff}
 
 /* Panel */
 .card{background:linear-gradient(160deg,var(--panel-a),var(--panel-b));border:1px solid var(--line);border-radius:18px;padding:20px;min-width:0}
