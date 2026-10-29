@@ -93,3 +93,9 @@ h2{font-family:var(--f-display);font-weight:700;font-size:20px;letter-spacing:3p
 .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#8a8a8a;margin-right:8px;flex:none}
 .dot.ok{background:var(--ok)}
 .dot.demo{background:var(--warn)}
+
+/* Seitenfuß wie auf lowend.dev: volle Breite, Linie oben, Links zentriert in Versalien, ohne Unterstreichung.
+   Markup und Beschriftungen kommen aus sitefoot.mjs (stamp() schreibt <footer class="sitefoot"> zwischen die Markierungen), nicht von Hand. */
+.sitefoot{display:flex;width:100%;box-sizing:border-box;flex-wrap:wrap;justify-content:center;gap:1rem 2rem;padding:1.75rem 1.5rem;border-top:1px solid rgba(255,255,255,.08)}
+.sitefoot a{color:var(--fg);text-decoration:none;font-size:.6875rem;letter-spacing:3px;text-transform:uppercase;opacity:.45;transition:opacity .15s,color .15s}
+.sitefoot a:hover{color:var(--accent);opacity:1;text-decoration:none}

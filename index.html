@@ -6,7 +6,7 @@
     <title>LowEnd Development</title>
     <meta name="description" content="LowEnd Development baut iOS-Apps, die auf dem Gerät bleiben. Whispered: Live-Transkription mit Sprechererkennung, ohne Cloud.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="site/style.css">
+    <link rel="stylesheet" href="site/style.css?v=0403c867c3">
 </head>
 <body>
 <main class="hero">
@@ -30,14 +30,14 @@
         <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/de-de?releaseDate=1761004800"
              alt="Laden im App Store" width="160" height="54">
     </a>
-    <a class="app-card" href="component_scanner/">
+    <a class="app-card" href="site/component-scan.html">
         <img src="component_scanner/icon.svg" alt="" width="64" height="64" class="app-icon">
         <div class="app-card-text">
             <strong>Component Scan</strong>
             <span>Web-App · Erkennt Widerstände und Spulen per Farbring und rechnet Kondensator- und SMD-Codes.</span>
         </div>
     </a>
-    <a class="app-card" href="missing-link/">
+    <a class="app-card" href="site/missing-link.html">
         <img src="missing-link/icon.svg" alt="" width="64" height="64" class="app-icon">
         <div class="app-card-text">
             <strong>Missing Link</strong>
@@ -46,10 +46,13 @@
     </a>
 </section>
 
-<nav>
-    <a href="site/support.html">Support</a>
-    <a href="site/impressum.html">Impressum</a>
-    <a href="site/datenschutz.html">Datenschutz</a>
-</nav>
+<!-- sitefoot base="" self="home" -->
+<footer class="sitefoot">
+  <a data-sitefoot="support" href="site/support.html">Support</a>
+  <a data-sitefoot="privacy" href="site/datenschutz.html">Datenschutz</a>
+  <a data-sitefoot="imprint" href="site/impressum.html">Impressum</a>
+  <a data-sitefoot="licences" href="site/lizenzen.html">Lizenzen</a>
+</footer>
+<!-- /sitefoot -->
 </body>
 </html>

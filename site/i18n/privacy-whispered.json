@@ -19,7 +19,6 @@
       "title": "Datenschutzerklärung – Whispered",
       "intro": "Diese Datenschutzerklärung gilt ausschließlich für die iOS-App <strong>Whispered</strong>.",
       "languagesLabel": "Sprache",
-      "nav": { "home": "Home", "app": "Whispered", "support": "Support", "privacy": "Datenschutz", "imprint": "Impressum" },
       "sections": [
         { "h": "1. Verantwortlicher", "p": ["{{CONTROLLER}}"] },
         { "h": "2. Grundsatz", "p": [
@@ -57,7 +56,6 @@
       "title": "Privacy Policy – Whispered",
       "intro": "This privacy policy applies solely to the iOS app <strong>Whispered</strong>.",
       "languagesLabel": "Language",
-      "nav": { "home": "Home", "app": "Whispered", "support": "Support", "privacy": "Privacy", "imprint": "Legal notice" },
       "sections": [
         { "h": "1. Controller", "p": ["{{CONTROLLER}}"] },
         { "h": "2. Data we collect", "p": [
@@ -95,7 +93,6 @@
       "title": "Política de privacidad – Whispered",
       "intro": "Esta política de privacidad se aplica exclusivamente a la app para iOS <strong>Whispered</strong>.",
       "languagesLabel": "Idioma",
-      "nav": { "home": "Inicio", "app": "Whispered", "support": "Soporte", "privacy": "Privacidad", "imprint": "Aviso legal" },
       "sections": [
         { "h": "1. Responsable", "p": ["{{CONTROLLER}}"] },
         { "h": "2. Datos que recopilamos", "p": [
@@ -133,7 +130,6 @@
       "title": "Politique de confidentialité – Whispered",
       "intro": "Cette politique de confidentialité s'applique exclusivement à l'application iOS <strong>Whispered</strong>.",
       "languagesLabel": "Langue",
-      "nav": { "home": "Accueil", "app": "Whispered", "support": "Assistance", "privacy": "Confidentialité", "imprint": "Mentions légales" },
       "sections": [
         { "h": "1. Responsable du traitement", "p": ["{{CONTROLLER}}"] },
         { "h": "2. Données collectées", "p": [
@@ -171,7 +167,6 @@
       "title": "Informativa sulla privacy – Whispered",
       "intro": "Questa informativa sulla privacy si applica esclusivamente all'app per iOS <strong>Whispered</strong>.",
       "languagesLabel": "Lingua",
-      "nav": { "home": "Home", "app": "Whispered", "support": "Supporto", "privacy": "Privacy", "imprint": "Note legali" },
       "sections": [
         { "h": "1. Titolare del trattamento", "p": ["{{CONTROLLER}}"] },
         { "h": "2. Dati raccolti", "p": [
@@ -209,7 +204,6 @@
       "title": "プライバシーポリシー – Whispered",
       "intro": "本プライバシーポリシーは、iOS アプリ <strong>Whispered</strong> にのみ適用されます。",
       "languagesLabel": "言語",
-      "nav": { "home": "ホーム", "app": "Whispered", "support": "サポート", "privacy": "プライバシー", "imprint": "運営者情報" },
       "sections": [
         { "h": "1. 管理者", "p": ["{{CONTROLLER}}"] },
         { "h": "2. 収集するデータ", "p": [
@@ -247,7 +241,6 @@
       "title": "Política de privacidade – Whispered",
       "intro": "Esta política de privacidade aplica-se exclusivamente à app para iOS <strong>Whispered</strong>.",
       "languagesLabel": "Idioma",
-      "nav": { "home": "Início", "app": "Whispered", "support": "Suporte", "privacy": "Privacidade", "imprint": "Informação legal" },
       "sections": [
         { "h": "1. Responsável pelo tratamento", "p": ["{{CONTROLLER}}"] },
         { "h": "2. Dados que recolhemos", "p": [
@@ -285,7 +278,6 @@
       "title": "隐私政策 – Whispered",
       "intro": "本隐私政策仅适用于 iOS 应用 <strong>Whispered</strong>。",
       "languagesLabel": "语言",
-      "nav": { "home": "首页", "app": "Whispered", "support": "支持", "privacy": "隐私", "imprint": "法律声明" },
       "sections": [
         { "h": "1. 数据控制者", "p": ["{{CONTROLLER}}"] },
         { "h": "2. 我们收集的数据", "p": [

@@ -1,5 +1,5 @@
 /* Farben, Schriften (Barlow, selbst gehostet), Wortmarke usw. kommen aus lowend.css (Quelle: Repo lowend-design). */
-@import url('lowend.css');
+@import url('lowend.css?v=d3a577ad8b');
 
 :root {
   --red: var(--accent);
@@ -98,33 +98,6 @@ body {
   color: var(--fg);
 }
 
-/* Navigation */
-
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1.75rem 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-nav a {
-  color: var(--fg);
-  text-decoration: none;
-  font-size: 0.6875rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  opacity: 0.45;
-  transition: opacity 0.15s, color 0.15s;
-}
-
-nav a:hover {
-  color: var(--red);
-  opacity: 1;
-  text-decoration: none;
-}
-
 /* Links */
 
 a {
@@ -202,7 +175,7 @@ a:hover {
   line-height: 1.5;
 }
 
-/* App-Seite (site/whispered.html) */
+/* App-Seiten (site/whispered.html, component-scan.html, missing-link.html) */
 
 .app-hero {
   display: flex;
@@ -225,6 +198,26 @@ a:hover {
   font-size: 1.0625rem;
   opacity: 0.85;
   max-width: 32rem;
+}
+
+/* Web-App öffnen (Component Scan, Missing Link) statt App-Store-Badge */
+.cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--red);
+  border-radius: 10px;
+  color: var(--fg);
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: background 0.15s;
+}
+
+.cta:hover {
+  background: var(--red);
+  text-decoration: none;
 }
 
 /* App-Store-Badge: Mindesthöhe 40 px, Freiraum 1/4 der Höhe (Apple-Richtlinie) */

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Scan – Bauteilwerte per Kamera und Code</title>
+    <meta name="description" content="Component Scan erkennt Widerstände und Spulen per Farbring und rechnet Kondensator- und SMD-Codes. Web-App, läuft im Browser, auch offline, ohne Upload.">
+    <meta property="og:title" content="Component Scan – Bauteilwerte per Kamera und Code">
+    <meta property="og:description" content="Widerstände und Spulen per Farbring, Kondensatoren und SMD-Widerstände per Code. Alles im Browser, keine Bilder verlassen das Gerät.">
+    <meta property="og:url" content="https://lowend.dev/site/component-scan.html">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="style.css?v=0403c867c3">
+</head>
+<body>
+<div class="page app-page">
+    <header class="app-hero">
+        <img src="../component_scanner/icon.svg" alt="Component Scan App-Icon" width="96" height="96" class="app-icon">
+        <h1>Component Scan</h1>
+        <p class="app-tagline">Bauteil vor die Kamera halten oder den Aufdruck eintippen, die App berechnet den Wert, ganz ohne Tabelle. Widerstände, Spulen, Kondensatoren und SMD-Codes, direkt im Browser.</p>
+        <a class="cta" href="../component_scanner/">Web-App öffnen</a>
+    </header>
+
+    <h2>Farbringe lesen</h2>
+    <p>
+        Widerstände mit 3 bis 6 Ringen und Spulen mit 3 oder 4 Ringen liest die App live über die
+        Kamera, nach IEC 60062. Du legst eine Linie längs über die Ringe, das Ergebnis stabilisiert
+        sich per Mehrheitsentscheid. Spulen erscheinen in nH, µH, mH oder H.
+    </p>
+
+    <h2>Codes rechnen</h2>
+    <p>
+        Kondensator-Aufdrucke wie 104, 4n7 oder 221J 50V ergeben Kapazität, Toleranz und Spannung.
+        SMD-Codes wie 102, 1002, 4R7 oder EIA-96 (01C) ergeben den Widerstand mit der typischen
+        Toleranz der Codeart. Beim Lesen kleiner Aufdrucke hilft die Kamera als Lupe.
+    </p>
+
+    <h2>Korrigieren statt raten</h2>
+    <p>
+        Bild einfrieren oder ein Foto laden, die Linie frei ziehen, falsch erkannte Farben antippen,
+        die Ringzahl wählen oder die Leserichtung umkehren. Bei gelbem oder blauem Licht stimmt
+        ein Weißabgleich auf einer weißen Fläche die Farben wieder. Die Prüfung gegen die
+        Normreihen E6, E12, E24 und E96 zeigt, ob ein Wert plausibel ist.
+    </p>
+
+    <h2>Privat, weil es nicht anders gebaut ist</h2>
+    <p>
+        Die App läuft vollständig in deinem Browser. Es werden keine Bilder hochgeladen, es gibt
+        kein Konto und keine Werbung. Einmal geladen, funktioniert sie auch offline und lässt sich
+        als App auf dem Homescreen installieren.
+        <a href="datenschutz-component-scanner.html">Datenschutzerklärung</a>
+    </p>
+
+    <h2>Hinweis</h2>
+    <p>
+        Ohne Gewähr: Die Farberkennung hängt von Licht und Kamera ab, Codes können je nach
+        Hersteller abweichen. Prüfe den Wert vor dem Einbau mit dem Multimeter.
+    </p>
+
+    <h2>Voraussetzungen</h2>
+    <p>
+        Ein aktueller Browser auf Smartphone oder Computer. Für Farbringe eine Kamera, am besten
+        Tageslicht und ein heller Hintergrund. Ohne Kamera lädst du ein Foto, Codes tippst du
+        einfach ein.
+    </p>
+
+    <h2>Support</h2>
+    <p>
+        Fragen, Fehler, Wünsche: <a href="support.html">Support-Seite</a> oder E-Mail an
+        <a href="#" data-e="dmVkLmRuZXdvbEB0cm9wcHVz"><span class="rev">ved.dnewol@troppus</span></a>.
+    </p>
+
+    <hr class="divider">
+
+    <h2>English</h2>
+    <p>
+        <strong>Component Scan</strong> – hold a component in front of the camera or type in the
+        printed code, and the app calculates the value, no chart needed. It reads resistors and
+        inductors by colour bands per IEC 60062 and decodes capacitor and SMD resistor codes.
+        It runs entirely in your browser, works offline and uploads no images.
+        <a href="../component_scanner/">Open the web app</a> ·
+        <a href="support.html">Support</a>
+    </p>
+</div>
+<!-- sitefoot base="../" privacy="datenschutz-component-scanner.html" licences="component-scan" -->
+<footer class="sitefoot">
+  <a data-sitefoot="home" href="../index.html">Home</a>
+  <a data-sitefoot="support" href="../site/support.html">Support</a>
+  <a data-sitefoot="privacy" href="../site/datenschutz-component-scanner.html">Datenschutz</a>
+  <a data-sitefoot="imprint" href="../site/impressum.html">Impressum</a>
+  <a data-sitefoot="licences" href="../site/lizenzen.html#component-scan">Lizenzen</a>
+</footer>
+<!-- /sitefoot -->
+<script src="contact.js"></script>
+</body>
+</html>

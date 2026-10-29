@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support – LowEnd Development</title>
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=0403c867c3">
 </head>
 <body>
 <div class="page">
@@ -64,11 +64,14 @@
     Der Konfigurator läuft vollständig in deinem Browser, die Daten deines Boards verlassen deinen Rechner nicht.
     Details in der <a href="datenschutz-missing-link.html">Datenschutzerklärung</a>.</p>
 </div>
-<nav>
-    <a href="../index.html">Home</a>
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutz</a>
-</nav>
+<!-- sitefoot base="../" self="support" -->
+<footer class="sitefoot">
+  <a data-sitefoot="home" href="../index.html">Home</a>
+  <a data-sitefoot="privacy" href="../site/datenschutz.html">Datenschutz</a>
+  <a data-sitefoot="imprint" href="../site/impressum.html">Impressum</a>
+  <a data-sitefoot="licences" href="../site/lizenzen.html">Lizenzen</a>
+</footer>
+<!-- /sitefoot -->
 <script src="contact.js"></script>
 </body>
 </html>

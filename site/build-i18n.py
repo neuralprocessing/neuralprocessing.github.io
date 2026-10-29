@@ -7,9 +7,14 @@ One dictionary, eight HTML files. Run from anywhere:
 
 The generated files are committed, because GitHub Pages serves static files and
 App Review must be able to open the URL without any build step.
+
+The footer is not part of this template's text: the sitefoot marker is filled in by
+site/stamp-footer.mjs (labels per language live in site/sitefoot.mjs), which this script
+runs on the files it wrote. Needs Node.js.
 """
 
 import json
+import subprocess
 from pathlib import Path
 
 SITE = Path(__file__).resolve().parent
@@ -53,13 +58,8 @@ TEMPLATE = """<!DOCTYPE html>
     <p>{intro}</p>
 {sections}
 </div>
-<nav>
-    <a href="../index.html">{nav_home}</a>
-    <a href="whispered.html">{nav_app}</a>
-    <a href="support.html">{nav_support}</a>
-    <a href="datenschutz.html">{nav_privacy}</a>
-    <a href="impressum.html">{nav_imprint}</a>
-</nav>
+<!-- sitefoot base="../" privacy="datenschutz.html" app="whispered.html" appname="Whispered" licences="whispered" -->
+<!-- /sitefoot -->
 <script src="contact.js"></script>
 </body>
 </html>
@@ -88,6 +88,7 @@ def main() -> None:
         for code in files
     ) + f'\n    <link rel="alternate" hreflang="x-default" href="{BASE_URL}{files[default]}">'
 
+    written: list[Path] = []
     for code, strings in languages.items():
         switcher = " · ".join(
             f"<strong>{languages[other]['name']}</strong>" if other == code
@@ -104,15 +105,13 @@ def main() -> None:
             switcher=switcher,
             intro=strings["intro"],
             sections="\n\n".join(render_section(s, code) for s in strings["sections"]),
-            nav_home=strings["nav"]["home"],
-            nav_app=strings["nav"]["app"],
-            nav_support=strings["nav"]["support"],
-            nav_privacy=strings["nav"]["privacy"],
-            nav_imprint=strings["nav"]["imprint"],
         )
         target = SITE / files[code]
         target.write_text(html, encoding="utf-8")
+        written.append(target)
         print(f"wrote {target.relative_to(SITE.parent)}  ({len(strings['sections'])} sections)")
+
+    subprocess.run(["node", str(SITE / "stamp-footer.mjs"), *map(str, written)], check=True)
 
 
 if __name__ == "__main__":
