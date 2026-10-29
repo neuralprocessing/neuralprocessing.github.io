@@ -44,7 +44,7 @@ h2{font-family:var(--f-display);font-weight:700;font-size:20px;letter-spacing:3p
    Zeilenhöhe .7 setzt die Versalhöhe von Barlow Condensed (.7em) fast bündig an die Zeilenoberkante. Die Striche sind Hintergründe,
    um den Vor- und Nachbreitenrand der Glyphen eingerückt, damit sie links und rechts bündig mit den Buchstaben abschließen.
    Gesamthöhe = Höhe des roten Blocks (Flex streckt beide gleich hoch). */
-.logo-main>span+span{--bar:max(1px,.028em);font-size:1.067em;line-height:.7;padding:calc(var(--bar) + .036em) 0 calc(var(--bar) + .129em);
+.logo-main>span+span{--bar:max(2px,.042em);font-size:1.067em;line-height:.7;padding:calc(var(--bar) + .022em) 0 calc(var(--bar) + .115em);
   background:linear-gradient(#fff,#fff) .035em 0/calc(100% - .065em) var(--bar),linear-gradient(#fff,#fff) .035em 100%/calc(100% - .065em) var(--bar);background-repeat:no-repeat}
 .logo-sub{width:0;min-width:100%;margin-top:8px!important;padding-left:.24em;box-sizing:border-box;font-size:clamp(10px,2.5vw,13px);line-height:1.35;font-weight:400;text-transform:uppercase;letter-spacing:.24em;color:#fff}
 
